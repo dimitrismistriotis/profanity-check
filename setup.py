@@ -13,7 +13,7 @@ setuptools.setup(
   long_description_content_type="text/markdown",
   url="https://github.com/vzhou842/profanity-check",
   packages=setuptools.find_packages(),
-  install_requires=['scikit-learn===0.23.1', 'joblib==0.15.1'],
+  install_requires=['scikit-learn==0.23.1', 'joblib==0.15.1'],
   package_data={ 'profanity_check': ['data/model.joblib', 'data/vectorizer.joblib'] },
   classifiers=[
     "Development Status :: 5 - Production/Stable",
