@@ -9,7 +9,10 @@ def _get_profane_prob(prob):
   return prob[1]
 
 def predict(texts):
-  return model.predict(vectorizer.transform(texts))
+  if model.predict_proba(vectorizer.transform(texts)) >= 0.75:
+    return 1
+  else:
+    return 0
 
 def predict_prob(texts):
   return np.apply_along_axis(_get_profane_prob, 1, model.predict_proba(vectorizer.transform(texts)))
