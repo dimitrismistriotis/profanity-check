@@ -13,10 +13,10 @@ def test_accuracy():
 
   probs = predict_prob(texts)
   for i in range(len(probs)):
-    if i == 0 or i == 2:
-      assert probs[i] <= 0.5
+    if i < 3:
+      assert probs[i] <= 0.75
     else:
-      assert probs[i] >= 0.5
+      assert probs[i] >= 0.75
 
 def test_edge_cases():
   texts = [
