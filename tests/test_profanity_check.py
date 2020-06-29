@@ -9,7 +9,7 @@ def test_accuracy():
     'fUcK u',
     'GO TO hElL, you dirty scum',
   ]
-  assert list(predict(texts)) == [0, 1, 0, 1, 1, 1]
+  assert list(predict(texts)) == [0, 0, 0, 1, 1, 1]
 
   probs = predict_prob(texts)
   for i in range(len(probs)):
